@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "license": "MIT",
   "description": "A package description (used by npm).",
-  "author": "Mathieu Acthernoene <zoontek@gmail.com>",
-  "homepage": "https://github.com/zoontek/react-native-bootsplash",
+  "author": "[YOUR FULL NAME] [YOUR EMAIL ADDRESS]",
+  "homepage": "https://github.com/[GITHUB_USERNAME]/react-native-module-template",
   "types": "dist/typescript/index.d.ts",
   "main": "dist/commonjs/index.js",
   "module": "dist/module/index.js",
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-native-module-template.git"
+    "url": "https://github.com/[GITHUB_USERNAME]/react-native-module-template.git"
   },
   "keywords": [
     "react-native-module-template",

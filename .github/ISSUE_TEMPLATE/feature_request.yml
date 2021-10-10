@@ -2,7 +2,7 @@ name: 💡 Feature request
 description: Submit your idea for a change in the codebase.
 labels: [feature request]
 assignees:
-  - zoontek
+  - [GITHUB_USERNAME]
 body:
   - type: markdown
     attributes:

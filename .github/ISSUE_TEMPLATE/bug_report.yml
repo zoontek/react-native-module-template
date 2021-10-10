@@ -2,7 +2,7 @@ name: 🐛 Bug report
 description: Report a reproducible bug or regression in this library.
 labels: [bug]
 assignees:
-  - zoontek
+  - [GITHUB_USERNAME]
 body:
   - type: markdown
     attributes:
