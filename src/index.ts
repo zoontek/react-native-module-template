@@ -11,22 +11,16 @@ export function getTimeZone(): Promise<string> {
   return NativeModule.getTimeZone();
 }
 
-type EventHandler = (body: { date: string; value: string }) => void;
-
 const emitter = new NativeEventEmitter(NativeModules.RNModuleTemplate);
-const handlers = new Set<EventHandler>();
 
-emitter.addListener("timeZoneChange", (data) => {
-  handlers.forEach((handler) => handler(data));
-});
+type Listeners = {
+  timeZoneChange: (body: { date: string; value: string }) => void;
+};
 
-export function addListener(
-  type: "timeZoneChange",
-  handler: EventHandler,
+export function addListener<Type extends keyof Listeners>(
+  type: Type,
+  listener: Listeners[Type],
 ): () => void {
-  handlers.add(handler);
-
-  return () => {
-    handlers.delete(handler);
-  };
+  const subscription = emitter.addListener(type, listener);
+  return subscription.remove;
 }

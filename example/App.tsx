@@ -25,7 +25,7 @@ export const App = () => {
     const removeListener = RNModuleTemplate.addListener(
       "timeZoneChange",
       ({ date, value }) => {
-        console.log("timeZoneChange", `[${date}]: ${value}`);
+        console.warn("timeZoneChange", `[${date}]: ${value}`);
       },
     );
 
