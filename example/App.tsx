@@ -25,7 +25,7 @@ export const App = () => {
     const removeListener = module.addListener(
       "timeZoneChange",
       ({ date, value }) => {
-        console.warn("New TimeZone", `Detected at ${date}, value: ${value}`);
+        console.log("timeZoneChange", `[${date}]: ${value}`);
       },
     );
 
