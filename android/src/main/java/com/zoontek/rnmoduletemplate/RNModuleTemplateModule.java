@@ -34,7 +34,7 @@ public class RNModuleTemplateModule extends ReactContextBaseJavaModule {
 
   public static final String MODULE_NAME = "RNModuleTemplate";
 
-  public RNModuleTemplateModule(ReactApplicationContext reactContext) {
+  public RNModuleTemplateModule(final ReactApplicationContext reactContext) {
     super(reactContext);
 
     IntentFilter filter = new IntentFilter();
@@ -43,8 +43,6 @@ public class RNModuleTemplateModule extends ReactContextBaseJavaModule {
     BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver() {
       @Override
       public void onReceive(Context context, Intent intent) {
-        ReactApplicationContext reactContext = getReactApplicationContext();
-
         if (intent.getAction().equals(Intent.ACTION_TIMEZONE_CHANGED)) {
           WritableMap body = Arguments.createMap();
 
