@@ -7,7 +7,7 @@ import {
   StyleSheet,
   Text,
 } from "react-native";
-import * as module from "./module";
+import * as module from "react-native-module-template";
 
 const styles = StyleSheet.create({
   main: {
