@@ -7,7 +7,7 @@ import {
   StyleSheet,
   Text,
 } from "react-native";
-import * as module from "react-native-module-template";
+import * as RNModuleTemplate from "react-native-module-template";
 
 const styles = StyleSheet.create({
   main: {
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
 
 export const App = () => {
   React.useEffect(() => {
-    const removeListener = module.addListener(
+    const removeListener = RNModuleTemplate.addListener(
       "timeZoneChange",
       ({ date, value }) => {
         console.log("timeZoneChange", `[${date}]: ${value}`);
@@ -35,13 +35,14 @@ export const App = () => {
   return (
     <SafeAreaView style={styles.main}>
       <StatusBar barStyle="dark-content" />
-      <Text style={styles.text}>initialTimeZone: {module.initialTimeZone}</Text>
+      <Text style={styles.text}>
+        initialTimeZone: {RNModuleTemplate.initialTimeZone}
+      </Text>
 
       <Button
         title="Get current timeZone"
         onPress={() => {
-          module
-            .getTimeZone()
+          RNModuleTemplate.getTimeZone()
             .then((timeZone) => Alert.alert("Current TimeZone", timeZone))
             .catch((error) => console.log(error));
         }}
