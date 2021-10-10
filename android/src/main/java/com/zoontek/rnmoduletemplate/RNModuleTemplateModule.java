@@ -77,7 +77,6 @@ public class RNModuleTemplateModule extends ReactContextBaseJavaModule {
     return constants;
   }
 
-
   @ReactMethod
   public void addListener(String eventName) {
     // Set up any upstream listeners or background tasks as necessary
