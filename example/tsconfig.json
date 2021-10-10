@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ESNext",
+    "jsx": "react-native",
+    "lib": ["ES2015"],
+    "moduleResolution": "Node",
+
+    "allowJs": false,
+    "noEmit": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "isolatedModules": true
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js"]
+}

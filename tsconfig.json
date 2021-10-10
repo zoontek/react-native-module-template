@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ESNext",
+    "jsx": "react-native",
+    "lib": ["ES2015"],
+    "moduleResolution": "Node",
+
+    "allowJs": false,
+    "strict": true,
+    "esModuleInterop": true,
+    "isolatedModules": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
+}
